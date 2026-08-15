@@ -3,6 +3,8 @@ let mainDiv = document.querySelector("#main-div");
 function createGrid(size)
 {
     mainDiv.replaceChildren();
+
+    mainDiv.style.setProperty("--grid-size", size);
     let i = 0;
     while(i < size * size)
     {
@@ -18,27 +20,18 @@ function createGrid(size)
     }
 }
 
-createGrid(16);
+resize.addEventListener("click", () => {
+    const answer = prompt("Enter the grid size:", "16");
+    if(answer === null)
+        return;
 
-function recreateGrid(size)
-{
+    const size = Number(answer);
     if(!Number.isInteger(size) || size <= 0 || size > 100)
     {
         alert("Enter a integer between 1 and 100.");
         return ;
     }
-
     createGrid(size);
-}
-
-resize.addEventListener("click", () => {
-    const answer = prompt("Enter the grid size:", "16");
-
-    if(answer === null)
-        return;
-
-    const size = Number(answer);
-    recreateGrid(size);
 })
 
 createGrid(16);
