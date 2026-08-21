@@ -9,7 +9,7 @@ A browser-based drawing toy inspired by the classic Etch-a-Sketch. Built with HT
 
 ## Live Demo
 
-https://topetch-a-sketch.netlify.app
+Live Solution: https://topetch-a-sketch.netlify.app
 
 ## Installation & Usage
 
